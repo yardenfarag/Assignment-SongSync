@@ -1,0 +1,22 @@
+@use '../styles//setup/variables' as variables;
+.tr {
+    transition: all .2s ease-in-out;
+    background-color: var(--clr8);
+    
+    .td {
+        border-radius: .375rem;
+        font-weight: 500;
+        padding: 1rem;
+        text-transform: capitalize;
+        font-size: .8rem;
+
+        @media(min-width: variables.$tablet) {
+            font-size: 1rem;
+        }
+        
+        
+    }
+    &:hover {
+        background-color: var(--clr7)
+    }
+}
