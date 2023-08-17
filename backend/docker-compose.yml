@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-    postgres:
+    postgres-nest:
         image: postgres:15.4
         restart: always
         environment:
@@ -24,19 +24,6 @@ services:
             dockerfile: Dockerfile
         ports:
             - 3000:3000
-        networks:
-            - shared-network
-
-    frontend:
-        container_name: frontend
-        restart: unless-stopped
-        image: frontend-prod:1.0.0
-        build:
-            context: frontend
-            target: production
-            dockerfile: Dockerfile
-        ports:
-            - 8080:8081
         networks:
             - shared-network
 
